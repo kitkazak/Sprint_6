@@ -16,8 +16,7 @@ public class CatTest {
     @Test
     public void getSoundReturnsМяу() {
         Cat cat = new Cat(feline);
-        String result = cat.getSound();
-        Assert.assertTrue(result.equals("Мяу"));
+        Assert.assertEquals("getSound() должен вернуть\"Мяу\" ", "Мяу", cat.getSound());
     }
 
     @Test
@@ -26,7 +25,4 @@ public class CatTest {
         cat.getFood();
         Mockito.verify(feline, Mockito.times(1)).eatMeat();
     }
-
-
-
 }

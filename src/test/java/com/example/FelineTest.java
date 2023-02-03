@@ -31,7 +31,7 @@ public class FelineTest {
     @Test
     public void getFamilyReturnsКошачьи() {
         Feline feline = new Feline();
-        Assert.assertTrue(feline.getFamily().equals("Кошачьи"));
+        Assert.assertEquals("getFamily() должен вернуть \"Кошачьи\"", "Кошачьи", feline.getFamily());
     }
 
     @Test
@@ -44,13 +44,13 @@ public class FelineTest {
     @Test
     public void getKittensNoArgsReturnsOne() {
         Feline feline = new Feline();
-        Assert.assertEquals(1, feline.getKittens());
+        Assert.assertEquals("getKittens() должен вернуть 1",1, feline.getKittens());
     }
 
     @Test
     public void testGetKittensWithTestData() {
         Feline feline = new Feline();
-        Assert.assertEquals(expectedKittensCount, feline.getKittens(kittensCount));
+        Assert.assertEquals("getKittens(int kittensCount) должен вернуть kittensCount", expectedKittensCount, feline.getKittens(kittensCount));
     }
 
     @Before

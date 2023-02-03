@@ -28,13 +28,13 @@ public class LionTest {
     @Test
     public void doesHaveManeСамецReturnsTrue() throws Exception {
         Lion lion = new Lion("Самец", feline);
-        Assert.assertTrue(lion.doesHaveMane());
+        Assert.assertTrue("Самец doesHaveMane() должен вернуть true", lion.doesHaveMane());
     }
 
     @Test
     public void doesHaveManeСамкаReturnsFalse() throws Exception {
         Lion lion = new Lion("Самка", feline);
-        Assert.assertFalse(lion.doesHaveMane());
+        Assert.assertFalse("Самка doesHaveMane() должен вернуть false", lion.doesHaveMane());
     }
 
     @Test
